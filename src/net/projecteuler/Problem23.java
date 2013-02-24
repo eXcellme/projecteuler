@@ -11,10 +11,11 @@ Find the sum of all the positive integers which cannot be written as the sum of 
 小于28123的正整数，不能写成两个abundant数的数的和。
  */
 public class Problem23 {
+	static long s1 = System.currentTimeMillis();
 	static List<Integer> abundants = allAbundants();
 	public static void main(String[] args) {
 //		System.out.println(l);
-		System.out.println(Problem21.divisors(4));
+//		System.out.println(Problem21.divisors(4));
 		int sum = 0;
 		for(int i=1;i<28123;i++){
 			if(!isSumOfAbundant(i)){
@@ -22,11 +23,16 @@ public class Problem23 {
 			}
 		}
 		System.out.println(sum);
+		System.out.println((System.currentTimeMillis()-s1)+" ms");
 	}
 
 	private static boolean isSumOfAbundant(int i) {
 		for(int a : abundants){
-			
+			int ab = i - a;
+			if(abundants.contains(ab)){
+//				System.out.println(i + " is sum of abundants");
+				return true ;
+			}
 		}
 		return false;
 	}

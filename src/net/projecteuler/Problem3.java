@@ -32,6 +32,8 @@ public class Problem3 {
 	 * @return
 	 */
 	public static boolean isPrime(long s) {
+		if(s<2) // 1 既不是质数也不是合数
+			return false;
 		if(s==2)
 			return true;
 		for(long i=2;i<1+Math.sqrt(s);i++){
