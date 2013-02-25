@@ -9,7 +9,7 @@ What is the millionth lexicographic permutation of the digits 0, 1, 2, 3, 4, 5, 
 0 1 2 3 4 5 6 7 8 9 
 组成的组合的第100万个数字
  */
-public class Problem24 {
+public class Problem24_ToSovle {
 	public static void main(String[] args) {
 		for(int i=0;i<10;i++){
 			
